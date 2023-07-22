@@ -34,10 +34,11 @@ mvn clean install
 **Usage**
 To run the UI automation for the "uitestingplayground" application, use the following command:
 
-mvn test -Dtest=UITestSuite
+mvn test -Dtest=cucumber.Options.TestRunnerAPI
+
 For executing the API automation for Swagger Pet Store APIs, use the command:
 
-mvn test -Dtest=APITestSuite
+ mvn test -Dtest=cucumber.Options.TestRunnerUI
 
 **Project Structure**
 The project follows a well-organized structure:
