@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.log4testng.Logger;
 import testBase.BaseTest;
-import utils.Utils;
+import testUtils.Utils;
 
 import java.io.IOException;
 import java.util.List;

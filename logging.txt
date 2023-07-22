@@ -26,7 +26,7 @@ Body:
     "status": "available"
 }
 HTTP/1.1 200 OK
-Date: Fri, 21 Jul 2023 17:45:39 GMT
+Date: Sat, 22 Jul 2023 13:40:28 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -36,158 +36,12 @@ Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 Server: Jetty(9.2.9.v20150224)
 
 {
-    "id": 9223372036854701757,
+    "id": 9223372036854251209,
     "category": {
         "id": 12345,
         "name": "01"
     },
     "name": "Raju",
-    "photoUrls": [
-        ""
-    ],
-    "tags": [
-        
-    ],
-    "status": "available"
-}
-Request method:	POST
-Request URI:	https://petstore.swagger.io/v2/pe
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=application/json
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "id": 0,
-    "category": {
-        "id": 12345,
-        "name": "01"
-    },
-    "name": "Raju",
-    "photoUrls": [
-        ""
-    ],
-    "tags": [
-        
-    ],
-    "status": "available"
-}
-HTTP/1.1 404 Not Found
-Date: Fri, 21 Jul 2023 17:45:40 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-Server: Jetty(9.2.9.v20150224)
-
-{
-    "code": 404,
-    "type": "unknown",
-    "message": "null for uri: http://petstore.swagger.io/v2/pe"
-}
-Request method:	POST
-Request URI:	https://petstore.swagger.io/v2/pet
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=application/json
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "id": 0,
-    "category": {
-        "id": 12345,
-        "name": "01"
-    },
-    "name": "Raju",
-    "photoUrls": [
-        ""
-    ],
-    "tags": [
-        
-    ],
-    "status": "available"
-}
-HTTP/1.1 200 OK
-Date: Fri, 21 Jul 2023 17:45:41 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-Server: Jetty(9.2.9.v20150224)
-
-{
-    "id": 9223372036854701759,
-    "category": {
-        "id": 12345,
-        "name": "01"
-    },
-    "name": "Raju",
-    "photoUrls": [
-        ""
-    ],
-    "tags": [
-        
-    ],
-    "status": "available"
-}
-Request method:	PUT
-Request URI:	https://petstore.swagger.io/v2/pet
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=application/json
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "id": 9223372036854701759,
-    "category": {
-        "id": 0,
-        "name": "dogs"
-    },
-    "name": "pup",
-    "photoUrls": [
-        ""
-    ],
-    "tags": [
-        
-    ],
-    "status": "available"
-}
-HTTP/1.1 200 OK
-Date: Fri, 21 Jul 2023 17:45:42 GMT
-Content-Type: application/json
-Transfer-Encoding: chunked
-Connection: keep-alive
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-Server: Jetty(9.2.9.v20150224)
-
-{
-    "id": 9223372036854701759,
-    "category": {
-        "id": 0,
-        "name": "dogs"
-    },
-    "name": "pup",
     "photoUrls": [
         ""
     ],

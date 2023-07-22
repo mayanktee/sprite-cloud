@@ -1,4 +1,4 @@
-package utils;
+package testUtils;
 
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;

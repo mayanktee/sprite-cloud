@@ -23,7 +23,7 @@ public class Hooks extends BaseTest {
         }
     }
 
-    @AfterStep
+    @AfterStep("@executeAfterStep")
     public static void fnTakescreenShot(Scenario scenario){
 
         final byte [] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);

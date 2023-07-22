@@ -1,4 +1,4 @@
-package utils;
+package testUtils;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;

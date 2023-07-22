@@ -1,6 +1,6 @@
 Feature: Verify Text Input functionality on UITestingPlayground
 
-  @tc1
+  @tc1 @executeAfterStep
   Scenario: Record setting text into the input field and pressing the button
     Given Launch the application UITestingPlayground
     And User is on the "UI Test Automation" application home page
@@ -9,7 +9,7 @@ Feature: Verify Text Input functionality on UITestingPlayground
     And User should be able to set the text "PRESS ME"
 
 
-  @tc2
+  @tc2 @executeAfterStep
   Scenario: Record setting text into the input field and validate button name changed
     Given Launch the application UITestingPlayground
     And User is on the "UI Test Automation" application home page

@@ -9,9 +9,9 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import requestPojo.Order;
-import utils.APIResources;
-import utils.SpecBuilder;
-import utils.TestDataBuild;
+import testUtils.APIResources;
+import testUtils.SpecBuilder;
+import testUtils.TestDataBuild;
 
 import java.io.IOException;
 

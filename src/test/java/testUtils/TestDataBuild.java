@@ -1,4 +1,4 @@
-package utils;
+package testUtils;
 
 import requestPojo.Category;
 import requestPojo.Order;

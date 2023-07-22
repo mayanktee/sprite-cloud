@@ -18,6 +18,35 @@
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
             <plugins>
                 <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>exec-maven-plugin</artifactId>
+                    <version>3.0.0</version>
+                    <executions>
+                        <!-- Execution for TestRunner1 -->
+                        <execution>
+                            <id>runner1</id>
+                            <goals>
+                                <goal>java</goal>
+                            </goals>
+                            <configuration>
+                                <mainClass>cucumber.Options.TestRunnerAPI</mainClass>
+                            </configuration>
+                        </execution>
+                        <!-- Execution for TestRunner2 -->
+                        <execution>
+                            <id>runner2</id>
+                            <goals>
+                                <goal>java</goal>
+                            </goals>
+                            <configuration>
+                                <mainClass>cucumber.Options.TestRunnerUI</mainClass>
+                            </configuration>
+                        </execution>
+                        <!-- Add more executions for additional runner classes if needed -->
+                    </executions>
+                </plugin>
+
+                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.0.0-M5</version>
@@ -63,6 +92,7 @@
             </plugins>
         </pluginManagement>
     </build>
+
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.junit.vintage/junit-vintage-engine -->
