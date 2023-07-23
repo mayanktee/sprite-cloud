@@ -60,4 +60,9 @@ public class MyStepdefsUI extends BaseTest {
     public void userShouldBeAbleToCompareTheValueWithYellowLabelCPULoad() {
         com.fnChromeProcessValueValidation();
     }
+
+    @Then("User should be land on {string} page")
+    public void userShouldBeLandOnPage(String pageName) {
+        com.fnLandingPageValidation(pageName);
+    }
 }

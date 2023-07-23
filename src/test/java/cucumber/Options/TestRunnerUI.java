@@ -15,7 +15,7 @@ import java.io.IOException;
         features = {"src/test/resources/feature/"},
         glue = {"step.definitions"},
         monochrome = true,
-        tags = "@table-02",
+        tags = "@dtable-01",
         plugin = {
                 "json:target/jsonReports/cucumber-report.json",
                 "html:target/cucumber-reports.html",

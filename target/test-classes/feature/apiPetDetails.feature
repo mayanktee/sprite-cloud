@@ -3,7 +3,7 @@ Feature: Everything about your pet form Swagger Pet API
 
   # The Swagger Pet API is an application that allows users to manage pet-related information such as pet details,
   # pet categories, and orders. In this scenario, we will focus on the order management functionality of the API.
-  # In this feature, as a user we are trying to create, get and delete the orders from pet store
+  # In this feature, as a user we are trying to automate and test add, update and upload the image of the pet functionality
 
   @addPet
   Scenario Outline: Add a new pet to store
@@ -41,7 +41,7 @@ Feature: Everything about your pet form Swagger Pet API
 
 
   @uploadImage
-  Scenario Outline: upload a pet image
+  Scenario Outline: Validate Upload a pet image API
     Given The Swagger Pet API is running
     When I upload the pet image with "<petId>" and "<filePath>"
     Then The API should respond for "UPLOADIMAGE" API with a new added pet ID
