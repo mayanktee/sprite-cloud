@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         tags = "@addPet",
         plugin = {
                 "json:target/jsonReports/cucumber-report.json",
-                "html:target/cucumber-reports",
+                "html:target/cucumber-reports.html",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "pretty"
         })

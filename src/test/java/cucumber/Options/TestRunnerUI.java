@@ -18,7 +18,7 @@ import java.io.IOException;
         tags = "@table-02",
         plugin = {
                 "json:target/jsonReports/cucumber-report.json",
-                "html:target/cucumber-reports",
+                "html:target/cucumber-reports.html",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "pretty",
         })
