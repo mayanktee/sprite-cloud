@@ -9,6 +9,7 @@ public enum APIResources {
     ADDPET("/pet"),
     ADDINVALIDPET("/pe"),
     UPLOADIMAGE("pet/{petId}/uploadImage"),
+    UPDATEINVALIDPET("/pe"),
     UPDATEPET("/pet");
 
     private String resource;

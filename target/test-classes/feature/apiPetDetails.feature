@@ -39,6 +39,20 @@ Feature: Everything about your pet form Swagger Pet API
       |categoryId  |categoryName|petName|newPetName|
       |12345       |01          |Raju   |pup     |
 
+  @updatePetInvalid
+  Scenario Outline: Update an pet details with invalid details
+    Given The Swagger Pet API is running
+    When I add a new pet with the following given pet details "<categoryId>" "<categoryName>" "<petName>"
+    Then The API should respond for "ADDPET" API with a new added pet ID
+    And The API should respond with a status code of 200
+    And Now I update the pet details with new details "<newPetName>"
+    Then  The API should respond for invalid "UPDATEINVALIDPET" API with updated details "<newPetName>"
+    And The API should respond with a status code of 404
+    Examples:
+      |categoryId  |categoryName|petName|newPetName|
+      |12345       |01          |Raju   |pup     |
+
+
 
   @uploadImage
   Scenario Outline: Validate Upload a pet image API

@@ -13,7 +13,8 @@ Feature: Order Management for Swagger Pet API
     And The API should respond with a status code of 200
       Examples:
       |id     |petId|
-      |12345  |01   |
+      |1233445  |01   |
+
 
   @retrieveOrder
   Scenario Outline: Retrieve the created order details after creating the new order id
@@ -26,7 +27,17 @@ Feature: Order Management for Swagger Pet API
      And The API should respond with a status code of 200
      Examples:
        |id     |petId|
-       |12345  |01   |
+       |1232245|01   |
+
+  @OrderNotFound
+  Scenario Outline: Unable to retrieve order details for given order id
+    Given The Swagger Pet API is running
+    When I retrieve the details from with given order "<id>"
+    Then The "GETSTOREID" API should respond with the order not found details
+    And The API should respond with a status code of 404
+    Examples:
+      |id |
+      |5  |
 
   @deleteOrderId
   Scenario Outline: Delete an order
@@ -36,7 +47,7 @@ Feature: Order Management for Swagger Pet API
     And The API should respond with a status code of 200
     Examples:
       |id    |
-      |11111  |
+      |11111 |
 
   @deleteSameOrderId
   Scenario Outline: Validate the order not found
@@ -45,5 +56,6 @@ Feature: Order Management for Swagger Pet API
     Then The order should be deleted from the system using "DELETEORDERID" API
     And The API should respond with a status code of 404
     Examples:
-      |id    |
-      |11111  |
+      |id     |
+      |11111|
+

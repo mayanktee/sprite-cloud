@@ -7,10 +7,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/test/resources/feature/apiPetDetails.feature"},
+        features = {"src/test/resources/feature/"},
         glue = {"step.definitions"},
-        monochrome = false,
-        tags = "@addPet",
+        monochrome = true,
+        tags = "@petDetailsAPI",
         plugin = {
                 "json:target/jsonReports/cucumber-report.json",
                 "html:target/cucumber-reports.html",

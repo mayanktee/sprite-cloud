@@ -16,11 +16,10 @@ public class Hooks extends BaseTest {
     @Before("@deleteOrderId")
     public static void beforeDelete() throws IOException {
         MyStepdefsAPI stepDef = new MyStepdefsAPI();
-        if(MyStepdefsAPI.newOrderId ==0) {
             stepDef.iCreateANewOrderWithTheFollowingGivenPet("11111", "01");
             stepDef.theAPIShouldRespondForAPIWithANewOrderID("CREATESTOREID");
             stepDef.theAPIShouldRespondWithAStatusCodeOf(200);
-        }
+
     }
 
     @AfterStep("@executeAfterStep")
