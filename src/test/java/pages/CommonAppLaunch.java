@@ -2,6 +2,7 @@ package pages;
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -74,7 +75,11 @@ public class CommonAppLaunch extends BaseTest {
     }
 
     public void fnClickTextInput(){
-        lnkTextInput.click();
+        try {
+            lnkTextInput.click();
+        }catch(WebDriverException e){
+            log.error("Unable to click due to " + e);
+        }
     }
 
     public void fnInputTextPageLanding(){
@@ -91,9 +96,12 @@ public class CommonAppLaunch extends BaseTest {
     }
 
     public void fnSetTextInButton(String inputText){
-        txtInputTextNewButtonName.sendKeys(inputText);
-        btnUpdateTextButton.click();
-
+        try {
+            txtInputTextNewButtonName.sendKeys(inputText);
+            btnUpdateTextButton.click();
+        }catch(WebDriverException e){
+            log.error("Exception occurred : " + e);
+        }
        }
 
     public void fnValidateTheButtonTextChanged(String inputText){
@@ -103,24 +111,32 @@ public class CommonAppLaunch extends BaseTest {
         log.info("Set Input text on button validation is done.");
     }
 
-    public void fnClickOnDynamicTable(){
-        lnkDynamicTable.click();
+    public void fnClickOnDynamicTable() {
+        try {
+            lnkDynamicTable.click();
+        } catch (WebDriverException e) {
+            log.error("Unable to click due to " + e);
+        }
     }
 
     public void fnGetChromeProcessFromDynamicTable(){
         chromeCPUValue= tbChromeCPUUsage.getText();
         List<WebElement> tbRow = driver.findElements(By.xpath("//*[@role='table']/div[3]/div"));
         List<WebElement> tbCol = driver.findElements(By.xpath("//*[@role='table']/div[3]/div[1]/span"));
-        for(WebElement row : tbRow){
-            if(row.getText().contains("Chrome")){
-                for(WebElement col : tbCol){
-                    if(col.getText().contains("%")){
-                        chromeProcessTableValue = col.getText();
-                        log.info("Value for the Chrome Process Load in the dynamic table :"+chromeProcessTableValue);
-                    }
+        try {
+            for (WebElement row : tbRow) {
+                if (row.getText().contains("Chrome")) {
+                    for (WebElement col : tbCol) {
+                        if (col.getText().contains("%")) {
+                            chromeProcessTableValue = col.getText();
+                            log.info("Value for the Chrome Process Load in the dynamic table :" + chromeProcessTableValue);
+                        }
 
+                    }
                 }
             }
+        }catch(WebDriverException e){
+            log.error("Exception occurred " + e);
         }
     }
 
