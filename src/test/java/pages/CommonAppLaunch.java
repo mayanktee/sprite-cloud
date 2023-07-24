@@ -1,13 +1,13 @@
 package pages;
 
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import org.testng.log4testng.Logger;
 import testBase.BaseTest;
 import testUtils.Utils;
 
@@ -18,6 +18,7 @@ import java.util.List;
 public class CommonAppLaunch extends BaseTest {
 
     Logger log = Logger.getLogger(CommonAppLaunch.class);
+
 
     @FindBy(id = "title")
     WebElement lblHomeTitle;
@@ -121,22 +122,19 @@ public class CommonAppLaunch extends BaseTest {
 
     public void fnGetChromeProcessFromDynamicTable(){
         chromeCPUValue= tbChromeCPUUsage.getText();
-        List<WebElement> tbRow = driver.findElements(By.xpath("//*[@role='table']/div[3]/div"));
-        List<WebElement> tbCol = driver.findElements(By.xpath("//*[@role='table']/div[3]/div[1]/span"));
-        try {
-            for (WebElement row : tbRow) {
-                if (row.getText().contains("Chrome")) {
-                    for (WebElement col : tbCol) {
-                        if (col.getText().contains("%")) {
-                            chromeProcessTableValue = col.getText();
+        List<WebElement> tbRow = driver.findElements(By.xpath("//*[@role='table']/div[3]/div/span[1]"));
+        int counter=0;
+            for (WebElement tRow : tbRow) {
+                counter++;
+                if (tRow.getText().contains("Chrome")) {
+                    List<WebElement> tbCol = driver.findElements(By.xpath("//*[@role='table']/div[3]/div["+counter+"]/span"));
+                    for (WebElement tbColChrome : tbCol) {
+                        if (tbColChrome.getText().contains("%")) {
+                            chromeProcessTableValue = tbColChrome.getText();
                             log.info("Value for the Chrome Process Load in the dynamic table :" + chromeProcessTableValue);
                         }
-
                     }
                 }
-            }
-        }catch(WebDriverException e){
-            log.error("Exception occurred " + e);
         }
     }
 
